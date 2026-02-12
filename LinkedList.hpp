@@ -19,6 +19,8 @@ class LinkedList : public List<T> {
 
         // a pointer to the front of the list
         Node* head;
+        Node* tail;
+
 
     private:
         // copy the state of the argument list to `this`
@@ -70,3 +72,4 @@ class LinkedList : public List<T> {
 
 #include "LinkedList.tpp"
 #endif
+
