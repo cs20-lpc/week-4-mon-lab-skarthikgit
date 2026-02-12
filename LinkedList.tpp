@@ -27,12 +27,11 @@ void LinkedList<T>::append(const T& elem) {
     n->next = nullptr;
     
     if (head == nullptr) {
-        head = n;
-        tail = n;
+        head = n;        
     } else {
         tail->next = n;
-        tail = n;
     }
+    tail = n;
     this->length++;    
 }
 
@@ -191,4 +190,5 @@ ostream& operator<<(ostream& outStream, const LinkedList<T>& myObj) {
 
     return outStream;
 }
+
 
