@@ -24,6 +24,21 @@ LinkedList<T>::~LinkedList() {
 template <typename T>
 void LinkedList<T>::append(const T& elem) {
     Node* n = new Node(elem);
+    n->next = nullptr;
+    
+    if (head == nullptr) {
+        head = n;
+        tail = n;
+    } else {
+        tail->next = n;
+        tail = n;
+    }
+    this->length++;    
+}
+
+template <typename T>
+void LinkedList<T>::append_old(const T& elem) {
+    Node* n = new Node(elem);
 
     if (head == nullptr) {
         head = n;
@@ -176,3 +191,4 @@ ostream& operator<<(ostream& outStream, const LinkedList<T>& myObj) {
 
     return outStream;
 }
+
