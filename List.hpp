@@ -17,6 +17,8 @@ class List {
         // add the argument to the end of the list
         virtual void append(const T&) = 0;
 
+        virtual void append_old(const T&) = 0;
+
         // remove all elements in the list, resetting to the initial state
         virtual void clear() = 0;
 
@@ -42,3 +44,4 @@ class List {
 };
 
 #endif
+
