@@ -42,6 +42,8 @@ class LinkedList : public List<T> {
         // add the argument to the end of the list
         virtual void append(const T&) override;
 
+        virtual void append_old(const T&) override;
+
         // remove all elements in the list, resetting to the initial state
         virtual void clear() override;
 
@@ -72,4 +74,5 @@ class LinkedList : public List<T> {
 
 #include "LinkedList.tpp"
 #endif
+
 
